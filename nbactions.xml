@@ -10,7 +10,7 @@
             <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
         </goals>
         <properties>
-            <exec.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${jpda.address} -Dmaven.test.skip=true -classpath %classpath org.persapiens.algorithms.Projeto2Main src/test/resources/grafo.txt</exec.args>
+            <exec.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${jpda.address} -classpath %classpath org.persapiens.algorithms.Projeto2Main src/test/resources/grafo.txt</exec.args>
             <exec.executable>java</exec.executable>
             <jpda.listen>true</jpda.listen>
         </properties>
@@ -82,7 +82,7 @@
             <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
         </goals>
         <properties>
-            <exec.args>-Dmaven.test.skip=true -classpath %classpath org.persapiens.algorithms.Projeto2Main src/test/resources/grafo.txt</exec.args>
+            <exec.args>-classpath %classpath org.persapiens.algorithms.Projeto2Main src/test/resources/grafo.txt</exec.args>
             <exec.executable>java</exec.executable>
         </properties>
     </action>
@@ -96,7 +96,7 @@
             <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
         </goals>
         <properties>
-            <exec.args>-Dmaven.test.skip=true -classpath %classpath org.persapiens.algorithms.Projeto2Main src/test/resources/grafo.txt</exec.args>
+            <exec.args>-classpath %classpath org.persapiens.algorithms.Projeto2Main src/test/resources/grafo.txt</exec.args>
             <exec.executable>java</exec.executable>
         </properties>
     </action>

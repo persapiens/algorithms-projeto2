@@ -20,6 +20,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Locale;
 import org.persapiens.algorithms.graph.apsp.FloydWarshall;
 import org.persapiens.algorithms.graph.apsp.Matrix;
 import static org.persapiens.algorithms.graph.apsp.Matrix.INFINITY;
@@ -61,7 +62,7 @@ public class Projeto2 {
 		String[] values = readLine.split(" ");
 		for (int j = 0; j < matrix.getRows(); j++) {
 			String s = values[j];
-			Integer value = s.equals("INFINITY") ? INFINITY : Integer.parseInt(s);
+			Integer value = s.toUpperCase(Locale.ITALY).startsWith("INF") ? INFINITY : Integer.parseInt(s);
 			matrix.set(i, j, value);
 		}
 		return matrix;
